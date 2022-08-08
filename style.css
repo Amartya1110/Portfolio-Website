@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=My+Soul&display=swap');
+
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+/*===================== Nav Bar =============================*/
+nav {
+    width: 100%;
+    /* padding: 20px 0px 0px; */
+    padding: 0px;
+    background-color: #050306;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* .logo>h1 {
+    font-family: 'My Soul', cursive;
+    font-size: 30px;
+    width: 100px;
+    color: #fff;
+    text-align: center;
+} */
+
+.logo {
+    height: 100px;
+    width: 100px;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.logo>img {
+    height: 150px;
+
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 500px;
+    
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-items>a {
+    color: #fff;
+    opacity: 0.8;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.nav-items>a:hover {
+    color: #00e5ff;
+    opacity: 1;
+}
+
+
+/*====================== Home Section ======================*/
+.home {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    background-color: rgba(0,0,0, 0.7);
+    background-blend-mode: darken;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 100px;
+}
+
+.video-bg{
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -16%);
+    z-index: -1;
+
+    min-width: 100%;
+    min-height: 100%;
+    width: 2000px;
+
+}
+
+.home-subheading {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+
+    align-self: flex-start;
+    margin-left: 20vw;
+}
+
+.home-heading {
+    /* text gradient color */
+    background-image: linear-gradient(to right bottom, #00e5ff 40%, #ff0033);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-family: sans-serif;
+    font-size: 6rem;
+    font-weight: 800;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: baseline;
+}
+
+.hero>.static-text {
+    font-family: cursive;
+    font-size: 6rem;
+    font-weight: 800;
+    -webkit-text-stroke: 3px #200f20;
+
+    /* text gradient color */
+    color: #00e5ff;
+}
+
+.hero>.dynamic-text {
+    list-style: none;
+    margin-left: 20px;
+
+    height: 30px;
+    line-height: 28px;
+    overflow: hidden;
+}
+
+
+.hero>.dynamic-text li span {
+    color: #aa02ec;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    position: relative;
+    top: 0;
+
+    animation: moveUp 6s steps(2) 2s infinite;
+}
+
+@keyframes moveUp {
+    100% {
+        top: -60px;
+    }
+}
+
+.hero>.dynamic-text li span::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid #aa02ec;
+    background-color: #050306;
+    /* background-color: white; */
+
+    animation: typing 3s steps(15) 2s infinite;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0px -30px 0px 30px;
+    }
+}
+
+
+/* ====================== About Section ====================== */
+.about {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about-heading {
+    width: 50%;
+    height: 100%;
+    background-color: #333333;
+
+    position: relative;
+}
+
+.about-heading>h1 {
+    color: #fff;
+    font-family: 'Parisienne', cursive;
+    font-size: 60px;
+    font-weight: 600;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.about-para {
+    width: 50%;
+    padding: 100px;
+}
+
+.about-para>p {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+
+
+/*====================== Projects section ======================*/
+.projects{
+    padding: 40px 100px 0px;
+    /* background-image: url("./assets/projects-bg.jpg"); */
+    /* background-size: cover; */
+    text-align: center;
+    padding-bottom: 50px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.projects-bg {
+    position: absolute;
+    top: 0%;
+    left: 40%;
+    transform: translate(-50%, 0%);
+    z-index: -1;
+
+    min-width: 100%;
+    min-height: 100%;
+    width: 2000px;
+}
+
+.projects>h1 {
+    color: #00e5ff;
+    font-family: 'Parisienne', cursive;
+    font-size: 60px;
+    padding: 50px 0px 20px;
+}
+
+.projects>h4 {
+    color: #ff0033;
+    font-family: sans-serif;
+    font-size: 15px;
+
+    margin-bottom: 50px;
+}
+
+.projects>h4::before {
+    content: "";
+    height: 1px;
+    width: 50px;
+    display: inline-block;
+    background-color: #ff0033;
+    margin-right: 10px;
+}
+.projects>h4::after {
+    content: "";
+    height: 1px;
+    width: 50px;
+    display: inline-block;
+    background-color: #ff0033;
+    margin-left: 10px;
+}
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.project-card {
+    margin: 20px 20px;
+    height: 250px;
+    width: 312px;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+
+.project-card>img {
+    width: 300px;
+    margin: 30px 5px;
+}
+
+.project-card>h1 {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.project-btns>a {
+    color: #fff;
+    background-image: linear-gradient(to right bottom, #00e5ff , #ff0033);
+    padding: 10px 0px;
+    width: 150px;
+    display: none;
+    border: none;
+    border-radius: 19px;
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    margin: 20px 5px;
+}
+
+.project-card:hover {
+    height: fit-content;
+    width: fit-content;
+}
+
+
+.project-card:hover .project-btns>a {
+    display: inline-block;
+}
+
+
+/* ========================== Contact Section ======================== */
+.contact {
+    padding: 100px;
+    background-color: #fff;
+}
+
+.contact-container {
+    /* margin: 60px 100px 20px; */
+    padding: 100px;
+    min-height: calc(100vh - 100px - 60px);
+    background-color: #333333;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-text {
+    margin: 30px 0px;
+}
+
+.contact-text>h1 {
+    color: #fff;
+    font-family: 'Parisienne', cursive;
+    font-size: 40px;
+    margin: 30px auto;
+}
+
+.contact-text>p {
+    color: #fff;
+    font-family: sans-serif;
+    padding: 5px;
+    max-width: 250px;
+
+    margin: 0px auto;
+}
+
+
+
+.contact-container>form {
+    height: 100%;
+    width: 60%;
+    min-width: 500px;
+    padding: 0px 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-container>form *{
+    margin: 10px 0px;
+}
+
+.contact-container>form> input {
+    height: 40px;
+    width: 100%;
+    border: 0px;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 10px;
+
+}
+
+.contact-container>form> textarea {
+    width: 100%;
+    border: none;
+    border: 0px;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.contact-btn {
+    color: #fff;
+    background-image: linear-gradient(to right bottom, #00e5ff , #ff0033);
+    padding: 10px 0px;
+    width: 150px;
+    display: inline-block;
+    border: none;
+    border-radius: 19px;
+    text-decoration: none;
+    text-align: center;
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contact-btn:hover {
+    cursor: pointer;
+}
+
+
+/* ========================== Footer Section ========================= */
+footer {
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+
+    padding-top: 50px;
+}
+
+footer>h1 {
+    font-family: 'My Soul', cursive;
+    font-size: 4vw;
+    margin-bottom: 30px;
+}
+
+.social-media>h4 {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+footer img {
+    box-sizing: content-box;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+
+    padding: 5px;
+    margin: 20px 10px 50px;
+}
+
+
+
+
+
+
+
+
